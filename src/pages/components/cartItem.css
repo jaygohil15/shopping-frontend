@@ -1,0 +1,33 @@
+
+.cart-item {
+   display: flex;
+   margin: 3vw 3vw;
+   align-items: center;
+}
+
+.cart-item img {
+   max-width: 15vw;
+   max-height: 15vw;
+   border-radius: 0.5vw;
+}
+
+.cart-item-container-1 {
+   margin-left: 2vw;
+}
+
+.cart-item .title {
+   font-weight: 600;
+}
+
+.cart-item-container-2 {
+   margin: auto;
+}
+
+.cart-item button {
+   border: none;
+   background-color: white;
+}
+
+.cart-item button :hover {
+   cursor: pointer;
+}

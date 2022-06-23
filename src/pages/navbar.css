@@ -1,0 +1,25 @@
+
+.navbar {
+   font-size: 2.5vh;
+   font-weight: 500;
+   display: flex;
+   background-color: #343a40;
+   color: #f8f9fa;
+   align-items: center;
+   flex-wrap: wrap;
+}
+
+.navbar-item {
+   margin: 1.5vh 3vh;
+}
+
+.navbar-header {
+   margin-left: 5%;
+   margin-right: 3%;
+   font-size: 3.5vh;
+}
+
+.navbar a {
+   color: #f8f9fa;
+   text-decoration: none;
+}
