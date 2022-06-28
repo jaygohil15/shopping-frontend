@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import './navbar.css'
 import { AiOutlineShoppingCart } from 'react-icons/ai'
 
-const navbar = () => {
+const Navbar = () => {
    return (
       <>
          <navbar className='navbar'>
@@ -18,4 +18,4 @@ const navbar = () => {
    )
 }
 
-export default navbar
+export default Navbar

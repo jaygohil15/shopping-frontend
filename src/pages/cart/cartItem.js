@@ -6,16 +6,45 @@ import { IconContext } from "react-icons";
 
 const CartItem = (props) => {
 
+
+   const addRemove = (type) => {
+      fetch(process.env.REACT_APP_CART, {
+         method: 'PUT',
+         headers: { 'Content-Type': 'application/json' },
+         body: JSON.stringify({
+            _id: props.product._id,
+            type: type
+         })
+      })
+         .then(res => res.json())
+         .then(data => {
+            console.log(data)
+         })
+   }
+
+
    const addOneToCart = () => {
-      console.log('jay')
+      addRemove('increment')
    }
 
    const removeOneFromCart = () => {
-
+      addRemove('decrement')
    }
 
    const removeAllFromCart = () => {
-
+      fetch(process.env.REACT_APP_CART, {
+         method: 'delete',
+         headers: {
+            'Content-Type': 'application/json'
+         },
+         body: JSON.stringify({
+            _id: props.product._id
+         })
+      })
+         .then(res => res.json())
+         .then(res => {
+            console.log(res)
+         })
    }
 
    return (

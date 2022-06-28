@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from 'react'
 import './cart.css'
-import CartItem from './components/cartItem'
+import CartItem from './cartItem'
 
 export default function Cart() {
 
@@ -18,7 +18,6 @@ export default function Cart() {
 
    useEffect(() => {
       fetchData()
-      console.log(typeof cartData)
    }, [])
 
    return (
