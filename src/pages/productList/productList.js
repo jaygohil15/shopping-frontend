@@ -13,7 +13,6 @@ const ProductList = () => {
       fetch(process.env.REACT_APP_PRODUCTLIST)
          .then(res => res.json())
          .then(data => {
-            console.log(data, '----data')
             dispatch(initialProductAdd(data))
             setProductData(data)
          })

@@ -30,6 +30,16 @@ export const productListSlice = createSlice({
          //       }
          //    }
          // })
+         console.log(state.value.length)
+         for (let i = 0; i < state.value.length; i++) {
+            if (state.value[i]._id === action.payload) {
+               console.log(current(state.value[i]))
+               state.value[i].quantity -= 1
+            }
+         }
+
+         console.log(current(state.value))
+
       }
    }
 })

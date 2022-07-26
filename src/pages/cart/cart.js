@@ -12,7 +12,7 @@ export default function Cart() {
          .then(res => res.json())
          .then(data => {
             setCartData(data)
-            console.log(data)
+            // console.log(data)
          })
    }
 
