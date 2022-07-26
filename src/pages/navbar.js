@@ -10,8 +10,6 @@ const Navbar = () => {
             <p className='navbar-item navbar-header' >Shop</p>
             <p className='navbar-item' ><Link to='/productlist' >Product List</Link></p>
             <Link to='/cart' ><p className='navbar-item' >Cart <AiOutlineShoppingCart /></p></Link>
-
-
          </navbar>
 
       </>

@@ -1,19 +1,14 @@
 import { useEffect, useState } from "react"
-import { useDispatch, useSelector } from "react-redux"
-import { initialProductAdd } from "../../redux/productListSlice"
 import Card from "./productListItem"
 import './productList.css'
 const ProductList = () => {
 
    const [productData, setProductData] = useState()
-   const dispatch = useDispatch()
 
-   const count = useSelector((state) => state.productList.value)
    const fetchData = () => {
       fetch(process.env.REACT_APP_PRODUCTLIST)
          .then(res => res.json())
          .then(data => {
-            dispatch(initialProductAdd(data))
             setProductData(data)
          })
    }

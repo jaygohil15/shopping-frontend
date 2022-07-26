@@ -1,10 +1,6 @@
 import './productListItem.css'
-import { removeOnePoduct } from '../../redux/productListSlice'
-import { useDispatch } from 'react-redux'
 
 const ProductListItem = (props) => {
-
-   const dispatch = useDispatch()
 
    const addToCart = () => {
 
@@ -26,15 +22,17 @@ const ProductListItem = (props) => {
          //    quantity: 1,
          //    price: props.product.price
          // })
-      })
+      }).then(res => res.json())
+         .then(data => {
+            console.log(data)
+            alert(`${props.product.name} Added to cart`)
+         })
       // .then(res => {
       //    console.log(res.json())
       // })
       // .then(data => {
       //    console.log(data)
       // })
-
-      dispatch(removeOnePoduct(props.product._id))
    }
 
    return (
